@@ -1,0 +1,74 @@
+{
+  "name": "new-gatsby-post",
+  "version": "0.0.0",
+  "description": "Scaffold out a new Gatsby post",
+  "license": "MIT",
+  "repository": "https://github.com/luftywiranda13/new-gatsby-post",
+  "author": {
+    "name": "Lufty Wiranda",
+    "email": "lufty.wiranda@gmail.com",
+    "url": "https://www.luftywiranda.com"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "scripts": {
+    "precommit": "remove-lockfiles && xo --fix && lint-staged",
+    "test": "xo && jest"
+  },
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {
+    "@sindresorhus/is": "^0.7.0",
+    "dateformat": "^3.0.2",
+    "dedent": "^0.7.0",
+    "lodash.kebabcase": "^4.1.1",
+    "lodash.startcase": "^4.4.0",
+    "make-dir": "^1.1.0",
+    "mz": "^2.7.0"
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^2.9.0",
+    "husky": "^0.14.3",
+    "jest": "^22.0.4",
+    "lint-staged": "^6.0.0",
+    "prettier": "^1.9.2",
+    "remove-lockfiles": "^1.4.2",
+    "xo": "^0.18.2"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverage": true
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.md": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "all"
+  },
+  "xo": {
+    "extends": "prettier",
+    "envs": [
+      "jest"
+    ]
+  },
+  "keywords": [
+    "gatsby",
+    "scaffold",
+    "react",
+    "blog",
+    "template",
+    "structure",
+    "workflow",
+    "create"
+  ]
+}
