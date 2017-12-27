@@ -12,7 +12,7 @@ const makeDir = require('make-dir');
 
 const newGatsbyPost = async (
   title,
-  { location = './src/pages/blog', date = Date.now() } = {},
+  { location = './src/pages/blog', date = Date.now() } = {}
 ) => {
   if (is.falsy(title)) {
     throw new Error('`title` is required!');
@@ -20,18 +20,18 @@ const newGatsbyPost = async (
 
   const formattedDate = dateFormat(date, 'isoDate');
   const pathToPost = await makeDir(
-    `${location}/${formattedDate}-${kebabCase(title)}`,
+    `${location}/${formattedDate}-${kebabCase(title)}`
   );
 
   await fs.writeFile(
-    path.normalize(path.join(pathToPost, 'index.md')),
+    path.normalize(`${pathToPost}/index.md`),
     dedent`
       ---
       date: "${formattedDate}"
       title: "${startCase(title)}"
       ---\n
     `,
-    'utf8',
+    'utf8'
   );
 
   return pathToPost;

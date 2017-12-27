@@ -13,8 +13,11 @@
     "node": ">=8"
   },
   "scripts": {
+    "lint": "xo",
     "precommit": "remove-lockfiles && xo --fix && lint-staged",
-    "test": "xo && jest"
+    "pretest": "npm run lint",
+    "test:watch": "jest --watch",
+    "test": "jest --coverage"
   },
   "files": [
     "index.js"
@@ -38,8 +41,7 @@
     "xo": "^0.18.2"
   },
   "jest": {
-    "testEnvironment": "node",
-    "collectCoverage": true
+    "testEnvironment": "node"
   },
   "lint-staged": {
     "*.js": [
@@ -53,7 +55,7 @@
   },
   "prettier": {
     "singleQuote": true,
-    "trailingComma": "all"
+    "trailingComma": "es5"
   },
   "xo": {
     "extends": "prettier",
