@@ -22,8 +22,8 @@ describe('folder structure', () => {
     Date.now = jest.genMockFunction().mockReturnValue('2013-08-05');
     const location = await newGatsbyPost('At least I tried');
 
-    expect(path.relative('./', location)).toBe(
-      'src/pages/blog/2013-08-05-at-least-i-tried',
+    expect(path.normalize(path.relative('./', location))).toBe(
+      path.normalize('src/pages/blog/2013-08-05-at-least-i-tried'),
     );
 
     jest.resetAllMocks();
@@ -36,8 +36,8 @@ describe('folder structure', () => {
       date: '2017-08-05',
     });
 
-    expect(path.relative('./', location)).toBe(
-      'src/pages/blog/2017-08-05-at-least-i-tried',
+    expect(path.normalize(path.relative('./', location))).toBe(
+      path.normalize('src/pages/blog/2017-08-05-at-least-i-tried'),
     );
   });
 
@@ -49,8 +49,8 @@ describe('folder structure', () => {
       location: 'src/pages',
     });
 
-    expect(path.relative('./', location)).toBe(
-      'src/pages/2013-08-05-at-least-i-tried',
+    expect(path.normalize(path.relative('./', location))).toBe(
+      path.normalize('src/pages/2013-08-05-at-least-i-tried'),
     );
 
     jest.resetAllMocks();
@@ -64,7 +64,10 @@ describe('frontmatter template', () => {
     const location = await newGatsbyPost('At least I tried', {
       date: '2017-08-05',
     });
-    const content = await fs.readFile(`${location}/index.md`, 'utf8');
+    const content = await fs.readFile(
+      path.normalize(`${location}/index.md`),
+      'utf8',
+    );
 
     expect(content).toBe(dedent`
       ---
