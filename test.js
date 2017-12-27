@@ -58,7 +58,27 @@ describe('folder structure', () => {
 });
 
 describe('frontmatter template', () => {
-  it('writes correct data', async () => {
+  it('writes correct `title`', async () => {
+    expect.assertions(1);
+
+    Date.now = jest.genMockFunction().mockReturnValue('2013-08-05');
+    const location = await newGatsbyPost('At least I tried');
+    const content = await fs.readFile(
+      path.normalize(`${location}/index.md`),
+      'utf8',
+    );
+
+    expect(content).toBe(dedent`
+      ---
+      date: '2013-08-05'
+      title: At Least I Tried
+      ---\n
+    `);
+
+    jest.resetAllMocks();
+  });
+
+  it('writes correct `date`', async () => {
     expect.assertions(1);
 
     const location = await newGatsbyPost('At least I tried', {
