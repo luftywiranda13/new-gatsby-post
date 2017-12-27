@@ -27,8 +27,8 @@ const newGatsbyPost = async (
     path.normalize(path.join(pathToPost, 'index.md')),
     dedent`
       ---
-      date: '${formattedDate}'
-      title: ${startCase(title)}
+      date: "${formattedDate}"
+      title: "${startCase(title)}"
       ---\n
     `,
     'utf8',

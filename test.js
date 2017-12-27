@@ -70,8 +70,8 @@ describe('frontmatter template', () => {
 
     expect(content).toBe(dedent`
       ---
-      date: '2013-08-05'
-      title: At Least I Tried
+      date: "2013-08-05"
+      title: "At Least I Tried"
       ---\n
     `);
 
@@ -91,8 +91,8 @@ describe('frontmatter template', () => {
 
     expect(content).toBe(dedent`
       ---
-      date: '2017-08-05'
-      title: At Least I Tried
+      date: "2017-08-05"
+      title: "At Least I Tried"
       ---\n
     `);
   });
