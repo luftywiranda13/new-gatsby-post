@@ -43,9 +43,12 @@ or, if you prefer `async/await`:
 ```js
 const newGatsbyPost = require('new-gatsby-post');
 
-const path = await newGatsbyPost('At Least I Tried', { date: '2013-08-05' });
-console.log(path);
-//=> '/Users/luftywiranda/blog/src/pages/blog/2013-08-05-at-least-i-tried'
+const myFunc = async () => {
+  const path = await newGatsbyPost('At Least I Tried', { date: '2013-08-05' });
+
+  console.log(path);
+  //=> '/Users/luftywiranda/blog/src/pages/blog/2013-08-05-at-least-i-tried'
+};
 ```
 
 ```sh
