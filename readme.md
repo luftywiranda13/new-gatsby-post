@@ -10,6 +10,7 @@ Scaffold out a new [Gatsby](https://www.gatsbyjs.org/) post
 
 ## Why
 
+* Generates folder structure and `frontmatter`
 * `Async/await` ready
 * Simple API
 * 100% test coverage
