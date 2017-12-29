@@ -11,7 +11,11 @@ describe('throws', () => {
   it('throws if `title` is not provided', async () => {
     expect.assertions(1);
 
-    await expect(newGatsbyPost()).rejects.toMatchSnapshot();
+    try {
+      await newGatsbyPost();
+    } catch (err) {
+      expect(err).toMatchSnapshot();
+    }
   });
 });
 
