@@ -17,3 +17,7 @@ test_script:
   - npm test
 cache:
   - '%APPDATA%\npm-cache'
+branches:
+  only:
+    - master
+    - /^greenkeeper/.*$/
