@@ -30,8 +30,7 @@ const newGatsbyPost = async (
       date: "${formattedDate}"
       title: "${startCase(title)}"
       ---\n
-    `,
-    'utf8'
+    `
   );
 
   return pathToPost;
