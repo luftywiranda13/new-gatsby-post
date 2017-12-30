@@ -14,9 +14,7 @@ const newGatsbyPost = async (
   title,
   { location = './src/pages/blog', date = Date.now() } = {}
 ) => {
-  if (is.falsy(title)) {
-    throw new Error('`title` is required!');
-  }
+  if (is.falsy(title)) throw new Error('`title` is required!');
 
   const formattedDate = dateFormat(date, 'isoDate');
   const pathToPost = await makeDir(
