@@ -22,7 +22,7 @@ const newGatsbyPost = async (
   );
 
   await fs.writeFile(
-    path.normalize(`${pathToPost}/index.md`),
+    path.join(`${pathToPost}/index.md`),
     dedent`
       ---
       date: "${formattedDate}"

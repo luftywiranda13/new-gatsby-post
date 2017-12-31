@@ -26,7 +26,7 @@ describe('folder structure', () => {
 
     const pathToPost = await newGatsbyPost('At least I tried');
 
-    expect(path.normalize(path.relative('./', pathToPost))).toBe(
+    expect(path.relative('./', pathToPost)).toBe(
       path.normalize('src/pages/blog/2013-08-05-at-least-i-tried')
     );
 
@@ -40,7 +40,7 @@ describe('folder structure', () => {
       date: '2017-08-05',
     });
 
-    expect(path.normalize(path.relative('./', pathToPost))).toBe(
+    expect(path.relative('./', pathToPost)).toBe(
       path.normalize('src/pages/blog/2017-08-05-at-least-i-tried')
     );
   });
@@ -53,7 +53,7 @@ describe('folder structure', () => {
       location: 'src/pages',
     });
 
-    expect(path.normalize(path.relative('./', pathToPost))).toBe(
+    expect(path.relative('./', pathToPost)).toBe(
       path.normalize('src/pages/2013-08-05-at-least-i-tried')
     );
 
@@ -68,7 +68,7 @@ describe('frontmatter template', () => {
 
     const pathToPost = await newGatsbyPost('At least I tried');
     const content = await fs.readFile(
-      path.normalize(`${pathToPost}/index.md`),
+      path.join(`${pathToPost}/index.md`),
       'utf8'
     );
 
@@ -89,7 +89,7 @@ describe('frontmatter template', () => {
       date: '2017-08-05',
     });
     const content = await fs.readFile(
-      path.normalize(`${pathToPost}/index.md`),
+      path.join(`${pathToPost}/index.md`),
       'utf8'
     );
 
