@@ -33,7 +33,7 @@ describe('folder structure', () => {
     jest.resetAllMocks();
   });
 
-  it('uses user-defined dates', async () => {
+  it('uses user-defined `date`', async () => {
     expect.assertions(1);
 
     const pathToPost = await newGatsbyPost('At least I tried', {
@@ -45,7 +45,7 @@ describe('folder structure', () => {
     );
   });
 
-  it('puts the folder in the correct location', async () => {
+  it('uses user-defined `location`', async () => {
     expect.assertions(1);
     Date.now = jest.genMockFunction().mockReturnValue('2013-08-05');
 
@@ -67,10 +67,7 @@ describe('frontmatter template', () => {
     Date.now = jest.genMockFunction().mockReturnValue('2013-08-05');
 
     const pathToPost = await newGatsbyPost('At least I tried');
-    const content = await fs.readFile(
-      path.join(`${pathToPost}/index.md`),
-      'utf8'
-    );
+    const content = await fs.readFile(`${pathToPost}/index.md`, 'utf8');
 
     expect(content).toBe(dedent`
       ---
@@ -88,10 +85,7 @@ describe('frontmatter template', () => {
     const pathToPost = await newGatsbyPost('At least I tried', {
       date: '2017-08-05',
     });
-    const content = await fs.readFile(
-      path.join(`${pathToPost}/index.md`),
-      'utf8'
-    );
+    const content = await fs.readFile(`${pathToPost}/index.md`, 'utf8');
 
     expect(content).toBe(dedent`
       ---

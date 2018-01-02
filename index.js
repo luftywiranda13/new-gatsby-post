@@ -1,14 +1,11 @@
 'use strict';
 
-const path = require('path');
-
 const dateFormat = require('dateformat');
 const dedent = require('dedent');
 const fs = require('fs-extra');
 const is = require('@sindresorhus/is');
 const kebabCase = require('lodash.kebabcase');
 const startCase = require('lodash.startcase');
-const makeDir = require('make-dir');
 
 const newGatsbyPost = async (
   title,
@@ -17,12 +14,10 @@ const newGatsbyPost = async (
   if (is.falsy(title)) throw new Error('`title` is required!');
 
   const formattedDate = dateFormat(date, 'isoDate');
-  const pathToPost = await makeDir(
-    `${location}/${formattedDate}-${kebabCase(title)}`
-  );
+  const pathToPost = `${location}/${formattedDate}-${kebabCase(title)}`;
 
-  await fs.writeFile(
-    path.join(`${pathToPost}/index.md`),
+  await fs.outputFile(
+    `${pathToPost}/index.md`,
     dedent`
       ---
       date: "${formattedDate}"
