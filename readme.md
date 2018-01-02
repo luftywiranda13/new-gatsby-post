@@ -14,7 +14,7 @@ Scaffold out a new [Gatsby](https://www.gatsbyjs.org/) post
 * `Async/await` ready
 * Simple API
 * 100% test coverage
-* Doesnʼt bundle a CLI
+* Doesnʼt bundle a CLI. _See [new-gatsby-post-cli](https://github.com/luftywiranda13/new-gatsby-post-cli) for the command-line tool_
 
 ## Installation
 
