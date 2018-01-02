@@ -2,9 +2,9 @@
 
 const path = require('path');
 
-const { fs } = require('mz');
 const dateFormat = require('dateformat');
 const dedent = require('dedent');
+const fs = require('fs-extra');
 const is = require('@sindresorhus/is');
 const kebabCase = require('lodash.kebabcase');
 const startCase = require('lodash.startcase');

@@ -2,8 +2,8 @@
 
 const path = require('path');
 
-const { fs } = require('mz');
 const dedent = require('dedent');
+const fs = require('fs-extra');
 
 const newGatsbyPost = require('./');
 
