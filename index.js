@@ -1,5 +1,6 @@
 'use strict';
 
+const path = require('path');
 const dateFormat = require('dateformat');
 const dedent = require('dedent');
 const fs = require('fs-extra');
@@ -26,7 +27,7 @@ const newGatsbyPost = async (
     `
   );
 
-  return pathToPost;
+  return path.resolve(pathToPost);
 };
 
 module.exports = newGatsbyPost;
