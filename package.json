@@ -23,7 +23,7 @@
     "index.js"
   ],
   "dependencies": {
-    "@sindresorhus/is": "^0.7.0",
+    "@sindresorhus/is": "^0.8.0",
     "dateformat": "^3.0.2",
     "dedent": "^0.7.0",
     "fs-extra": "^5.0.0",
