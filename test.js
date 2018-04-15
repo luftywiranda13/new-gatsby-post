@@ -3,7 +3,7 @@
 const path = require('path');
 const fs = require('fs-extra');
 
-const newGatsbyPost = require('./');
+const newGatsbyPost = require('.');
 
 describe('throws', () => {
   it('throws if `title` is not provided', async () => {

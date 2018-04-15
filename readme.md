@@ -1,12 +1,12 @@
 # new-gatsby-post
 
-[![Package Version](https://img.shields.io/npm/v/new-gatsby-post.svg)](https://www.npmjs.com/package/new-gatsby-post)
-[![Build Status: Linux](https://img.shields.io/travis/luftywiranda13/new-gatsby-post/master.svg)](https://travis-ci.org/luftywiranda13/new-gatsby-post)
-[![Build status: Windows](https://ci.appveyor.com/api/projects/status/urakliukex3h6lfd/branch/master?svg=true)](https://ci.appveyor.com/project/luftywiranda13/new-gatsby-post/branch/master)
-[![Coverage Status](https://img.shields.io/codecov/c/github/luftywiranda13/new-gatsby-post/master.svg)](https://codecov.io/gh/luftywiranda13/new-gatsby-post)
-[![Downloads Status](https://img.shields.io/npm/dm/new-gatsby-post.svg)](https://npm-stat.com/charts.html?package=new-gatsby-post&from=2016-04-01)
+> Scaffold out a new [Gatsby](https://www.gatsbyjs.org/) post
 
-Scaffold out a new [Gatsby](https://www.gatsbyjs.org/) post
+[![Package Version](https://img.shields.io/npm/v/new-gatsby-post.svg?style=flat-square)](https://www.npmjs.com/package/new-gatsby-post)
+[![Downloads Status](https://img.shields.io/npm/dm/new-gatsby-post.svg?style=flat-square)](https://npm-stat.com/charts.html?package=new-gatsby-post&from=2016-04-01)
+[![Build Status: Linux](https://img.shields.io/travis/luftywiranda13/new-gatsby-post/master.svg?style=flat-square)](https://travis-ci.org/luftywiranda13/new-gatsby-post)
+[![Build status: Windows](https://ci.appveyor.com/api/projects/status/urakliukex3h6lfd/branch/master?svg=true)](https://ci.appveyor.com/project/luftywiranda13/new-gatsby-post/branch/master)
+[![Coverage Status](https://img.shields.io/codecov/c/github/luftywiranda13/new-gatsby-post/master.svg?style=flat-square)](https://codecov.io/gh/luftywiranda13/new-gatsby-post)
 
 ## Why
 
